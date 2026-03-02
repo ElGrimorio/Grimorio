@@ -24,63 +24,6 @@ const biblioteca = {
         quote: "Pocos hombres son capaces de ver su propia sombra.",
         autor_quote: "— Carl Jung"
     },
-    "el-tarot": {
-        titulo: "El Tarot: El Libro de Thoth",
-        breadcrumb: "Archivo / Adivinación / Cartomancia",
-        fecha: "2 de marzo, 2026",
-        infobox: {
-            header: "Arcanos Mayores",
-            imagen: "https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?q=80&w=400",
-            label1: "Origen:", val1: "Desconocido / Egipto",
-            label2: "Cartas:", val2: "78 Láminas",
-            label3: "Elemento:", val3: "Éter / Quintaesencia",
-            label4: "Regente:", val4: "Mercurio ☿"
-        },
-        introduccion: "El <strong>Tarot</strong> no es solo un método de adivinación, sino un mapa simbólico de la experiencia humana y el camino del héroe.",
-        cuerpo: `
-            <h2>La Estructura Arquetípica</h2>
-            <hr>
-            <p>El mazo se divide en dos grandes grupos que reflejan el macrocosmos y el microcosmos:</p>
-            <ul class="article-list">
-                <li><strong>Arcanos Mayores:</strong> 22 lecciones espirituales fundamentales.</li>
-                <li><strong>Arcanos Menores:</strong> Situaciones cotidianas y elementales (Copas, Espadas, Bastos y Oros).</li>
-            </ul>
-            <p>Cada lectura es un espejo del subconsciente que revela lo que el consultante ya sabe pero no ha integrado.</p>
-        `,
-        quote: "El Tarot es una máquina de pensar.",
-        autor_quote: "— Alejandro Jodorowsky"
-    },
-    "alquimia-hermetica": {
-        titulo: "Alquimia: El Arte de la Transmutación",
-        breadcrumb: "Archivo / Ciencias Ocultas / Hermetismo",
-        fecha: "2 de marzo, 2026",
-        infobox: {
-            header: "Opus Magnum",
-            imagen: "https://images.unsplash.com/photo-1532187863486-abf9d39d99c5?q=80&w=400",
-            label1: "Objetivo:", val1: "Piedra Filosofal",
-            label2: "Padre:", val2: "Hermes Trismegisto",
-            label3: "Fases:", val3: "4 (Nigredo a Rubedo)",
-            label4: "Símbolo:", val4: "Ouroboros 🐍"
-        },
-        introduccion: "La <strong>Alquimia</strong> es la ciencia antigua de la transformación, tanto de la materia física como del espíritu humano.",
-        cuerpo: `
-            <h2>Las Tres Sustancias</h2>
-            <hr>
-            <p>Para el alquimista, todo en el universo está compuesto por tres principios filosóficos:</p>
-            <ul class="article-list">
-                <li><strong>Azufre (Sol):</strong> El alma, el principio activo y masculino.</li>
-                <li><strong>Mercurio (Luna):</strong> El espíritu, el mediador y femenino.</li>
-                <li><strong>Sal (Tierra):</strong> El cuerpo, la base material.</li>
-            </ul>
-            <p>Resolver y coagular (Solve et Coagula) es la máxima para alcanzar la perfección o el "Oro de los Filósofos".</p>
-        `,
-        quote: "Lo que está abajo es como lo que está arriba.",
-        autor_quote: "— Tabla de Esmeralda"
-    }
-};
-
-
-const biblioteca = {
     "aries": {
         titulo: "Aries: El Fuego Primordial",
         breadcrumb: "Archivo / Astrología / Signos de Fuego",
@@ -88,10 +31,10 @@ const biblioteca = {
         infobox: {
             header: "Signo de Aries",
             imagen: "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=400",
-            val1: "Cardinal de Fuego",
-            val2: "El Carnero",
-            val3: "Calcina-tio",
-            val4: "Marte ♂"
+            label1: "Elemento:", val1: "Cardinal de Fuego",
+            label2: "Símbolo:", val2: "El Carnero",
+            label3: "Proceso:", val3: "Calcina-tio",
+            label4: "Regente:", val4: "Marte ♂"
         },
         introduccion: "<strong>Aries</strong> es el primer signo del zodíaco, representando el estallido inicial de la conciencia y la fuerza vital que rompe el invierno.",
         cuerpo: `
@@ -114,10 +57,10 @@ const biblioteca = {
         infobox: {
             header: "Signo de Escorpio",
             imagen: "https://images.unsplash.com/photo-1502484732135-246e660507a7?q=80&w=400",
-            val1: "Fijo de Agua",
-            val2: "El Escorpión / Águila",
-            val3: "Separatio",
-            val4: "Plutón ♇ / Marte ♂"
+            label1: "Elemento:", val1: "Fijo de Agua",
+            label2: "Símbolo:", val2: "El Escorpión / Águila",
+            label3: "Proceso:", val3: "Separatio",
+            label4: "Regente:", val4: "Plutón ♇ / Marte ♂"
         },
         introduccion: "<strong>Escorpio</strong> es el signo de la muerte y el renacimiento, el punto donde el alma debe descender a sus propias profundidades para transmutarse.",
         cuerpo: `
@@ -132,5 +75,26 @@ const biblioteca = {
         `,
         quote: "No hay luz sin oscuridad, ni vida sin muerte.",
         autor_quote: "— Misterios Mayores"
+    },
+    "tauro": {
+        titulo: "Tauro: La Estabilidad de la Tierra",
+        breadcrumb: "Archivo / Astrología / Signos de Tierra",
+        fecha: "2 de marzo, 2026",
+        infobox: {
+            header: "Signo de Tauro",
+            imagen: "https://images.unsplash.com/photo-1544040161-079743c3d527?q=80&w=400",
+            label1: "Elemento:", val1: "Fijo de Tierra",
+            label2: "Símbolo:", val2: "El Toro",
+            label3: "Proceso:", val3: "Coagulatio",
+            label4: "Regente:", val4: "Venus ♀"
+        },
+        introduccion: "<strong>Tauro</strong> representa la manifestación física y la consolidación de la energía. Es el jardín donde la semilla de Aries echa raíces.",
+        cuerpo: `
+            <h2>La Densidad y el Valor</h2>
+            <hr>
+            <p>Esotéricamente, Tauro rige la garganta y la palabra creadora. En la alquimia, se asocia con la <em>Coagulatio</em>, el proceso de dar cuerpo y forma al espíritu.</p>
+        `,
+        quote: "En la quietud de la tierra reside la fuerza del diamante.",
+        autor_quote: "— Sabiduría Elemental"
     }
 };
