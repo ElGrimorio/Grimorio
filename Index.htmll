@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada | El Grimorio Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para que los resultados de búsqueda se vean bien */
+        .search-wrapper { position: relative; max-width: 600px; margin: 25px auto; }
+        #resultados-busqueda {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--sidebar-bg);
+            border: 1px solid var(--gold);
+            border-top: none;
+            border-radius: 0 0 15px 15px;
+            z-index: 5000;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none; /* Se oculta por defecto */
+        }
+        .resultado-item {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold-dim);
+            transition: 0.3s;
+        }
+        .resultado-item:hover { background: var(--gold-dim); color: var(--gold); }
+        .resultado-item strong { display: block; font-family: 'Cinzel'; font-size: 0.9rem; }
+        .resultado-item small { color: #888; font-size: 0.75rem; }
+    </style>
+</head>
+<body class="wiki-theme">
+
+    <canvas id="canvas-stars"></canvas>
+
+    <nav class="wiki-navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="mobile-menu-btn" id="menuBtn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="nav-logo">
+                    <i data-lucide="library" class="gold-icon"></i>
+                    <span>EL GRIMORIO</span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="#seccion-registro" class="btn-gold">Registrar Iniciado</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wiki-wrapper">
+        <aside class="wiki-sidebar" id="sidebar">
+            <div class="sidebar-section">
+                <h3>Navegación</h3>
+                <a href="index.html" class="active"><i data-lucide="home"></i> Portada</a>
+                <a href="#"><i data-lucide="book-marked"></i> Glosario Arcano</a>
+            </div>
+            <div class="sidebar-section">
+                <h3>El Archivo</h3>
+                <a href="Articulos/Psicologia/articulo.html?id=aries"><i data-lucide="moon"></i> Astrología</a>
+                <a href="Articulos/Psicologia/articulo.html?id=alquimia-hermetica"><i data-lucide="flask-conical"></i> Alquimia</a>
+            </div>
+        </aside>
+
+        <main class="wiki-main">
+            <header class="main-page-welcome">
+                <div class="welcome-content">
+                    <h1>Archivo del Grimorio Digital</h1>
+                    <p>Preservando el conocimiento silenciado a través de los siglos.</p>
+                    
+                    <div class="search-wrapper">
+                        <div class="main-search-box">
+                            <i data-lucide="search"></i>
+                            <input type="text" id="buscador-input" placeholder="¿Qué secreto buscas hoy? (Ej: Aries, Escorpio...)">
+                        </div>
+                        <div id="resultados-busqueda"></div>
+                    </div>
+
+                    <div class="welcome-stats">
+                        <span><strong>1,204</strong> Páginas</span> • <span><strong>15</strong> Investigadores</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="main-page-grid">
+                <section class="main-column-left">
+                    <h2 class="block-title"><i data-lucide="layout-grid"></i> Categorías del Saber</h2>
+                    <div class="category-grid">
+                        <a href="#" class="cat-card"><i data-lucide="moon"></i><h4>Astrología</h4></a>
+                        <a href="#" class="cat-card"><i data-lucide="flask-conical"></i><h4>Alquimia</h4></a>
+                        <a href="#" class="cat-card"><i data-lucide="gem"></i><h4>Cristales</h4></a>
+                        <a href="#" class="cat-card"><i data-lucide="scroll"></i><h4>Historia</h4></a>
+                    </div>
+
+                    <h2 class="block-title"><i data-lucide="award"></i> Artículo Destacado</h2>
+                    <div class="featured-block">
+                        <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=400" alt="La Sombra">
+                        <div class="featured-text">
+                            <h3>La Sombra: El Encuentro con el Self</h3>
+                            <p>Análisis sobre el arquetipo de lo oculto y la fase Nigredo...</p>
+                            <a href="Articulos/Psicologia/articulo.html?id=la-sombra" class="wiki-link">Explorar el Archivo →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="main-column-right">
+                    <div class="wiki-block gold-border">
+                        <h3>Novedades</h3>
+                        <ul class="wiki-list">
+                            <li><span class="date">02/03</span> <a href="Articulos/Psicologia/articulo.html?id=aries">Signo de Aries</a></li>
+                            <li><span class="date">02/03</span> <a href="Articulos/Psicologia/articulo.html?id=escorpio">Signo de Escorpio</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <section id="seccion-registro" class="wiki-block gold-border" style="margin-top: 50px;">
+                <h3><i data-lucide="scroll"></i> El Círculo de Iniciados</h3>
+                <form id="registroForm">
+                    <input type="text" name="nombre" placeholder="Nombre Arcano" required>
+                    <button type="submit" id="btnEnviar">Consagrar Registro</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="datos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Lógica del buscador integrada para que funcione sí o sí
+        const input = document.getElementById('buscador-input');
+        const resCont = document.getElementById('resultados-busqueda');
+
+        input.addEventListener('input', () => {
+            const query = input.value.toLowerCase();
+            resCont.innerHTML = '';
+            
+            if(query.length < 2) {
+                resCont.style.display = 'none';
+                return;
+            }
+
+            let encontrados = 0;
+            for(let id in biblioteca) {
+                if(biblioteca[id].titulo.toLowerCase().includes(query)) {
+                    const a = document.createElement('a');
+                    a.href = `Articulos/Psicologia/articulo.html?id=${id}`;
+                    a.className = 'resultado-item';
+                    a.innerHTML = `<strong>${biblioteca[id].titulo}</strong><small>${biblioteca[id].breadcrumb}</small>`;
+                    resCont.appendChild(a);
+                    encontrados++;
+                }
+            }
+            resCont.style.display = encontrados > 0 ? 'block' : 'none';
+        });
+
+        // Cerrar resultados al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            if (!input.contains(e.target)) resCont.style.display = 'none';
+        });
+
+        lucide.createIcons();
+    </script>
+</body>
+  </html>
+  
