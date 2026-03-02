@@ -6,10 +6,10 @@ const biblioteca = {
         infobox: {
             header: "Arquetipo de la Sombra",
             imagen: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=400",
-            label1: "Concepto:", val1: "Lado Oculto",
-            label2: "Autor:", val2: "C. G. Jung",
-            label3: "Etapa:", val3: "Nigredo",
-            label4: "Regente:", val4: "Saturno ♄"
+            val1: "Lado Oculto",
+            val2: "C. G. Jung",
+            val3: "Nigredo",
+            val4: "Saturno ♄"
         },
         introduccion: "La <strong>Sombra</strong> es el 'lado oscuro' de nuestra personalidad. Según Carl Jung, está compuesta por las emociones y los impulsos que la mente consciente rechaza.",
         cuerpo: `
@@ -31,21 +31,16 @@ const biblioteca = {
         infobox: {
             header: "Signo de Aries",
             imagen: "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=400",
-            label1: "Elemento:", val1: "Cardinal de Fuego",
-            label2: "Símbolo:", val2: "El Carnero",
-            label3: "Proceso:", val3: "Calcina-tio",
-            label4: "Regente:", val4: "Marte ♂"
+            val1: "Cardinal de Fuego",
+            val2: "El Carnero",
+            val3: "Calcina-tio",
+            val4: "Marte ♂"
         },
         introduccion: "<strong>Aries</strong> es el primer signo del zodíaco, representando el estallido inicial de la conciencia y la fuerza vital que rompe el invierno.",
         cuerpo: `
             <h2>Naturaleza Esotérica</h2>
             <hr>
             <p>En el sendero del iniciado, Aries representa la voluntad pura. Es el impulso que nos lleva a la existencia. Su regente, Marte, le otorga la armadura necesaria para enfrentar las pruebas del espíritu.</p>
-            <ul class="article-list">
-                <li><strong>Correspondencia Alquímica:</strong> Calcinatio (Purificación por fuego).</li>
-                <li><strong>Metal:</strong> Hierro.</li>
-                <li><strong>Día:</strong> Martes.</li>
-            </ul>
         `,
         quote: "Yo soy el guerrero que surge del tiempo.",
         autor_quote: "— Tradición Esotérica"
@@ -57,21 +52,16 @@ const biblioteca = {
         infobox: {
             header: "Signo de Escorpio",
             imagen: "https://images.unsplash.com/photo-1502484732135-246e660507a7?q=80&w=400",
-            label1: "Elemento:", val1: "Fijo de Agua",
-            label2: "Símbolo:", val2: "El Escorpión / Águila",
-            label3: "Proceso:", val3: "Separatio",
-            label4: "Regente:", val4: "Plutón ♇ / Marte ♂"
+            val1: "Fijo de Agua",
+            val2: "El Escorpión / Águila",
+            val3: "Separatio",
+            val4: "Plutón ♇ / Marte ♂"
         },
         introduccion: "<strong>Escorpio</strong> es el signo de la muerte y el renacimiento, el punto donde el alma debe descender a sus propias profundidades para transmutarse.",
         cuerpo: `
             <h2>El Misterio de la Transmutación</h2>
             <hr>
-            <p>Escorpio rige los procesos de crisis y regeneración. Es el alquimista del zodíaco, transformando el plomo de los deseos básicos en el oro de la sabiduría espiritual.</p>
-            <ul class="article-list">
-                <li><strong>Las Tres Etapas:</strong> El Escorpión (instinto), el Águila (intelecto) y el Fénix (espíritu).</li>
-                <li><strong>Metal:</strong> Plutonio / Hierro magnético.</li>
-                <li><strong>Proceso:</strong> Putrefactio.</li>
-            </ul>
+            <p>Escorpio rige los procesos de crisis y regeneración. Transforma el plomo de los deseos en el oro de la sabiduría espiritual.</p>
         `,
         quote: "No hay luz sin oscuridad, ni vida sin muerte.",
         autor_quote: "— Misterios Mayores"
@@ -83,16 +73,16 @@ const biblioteca = {
         infobox: {
             header: "Signo de Tauro",
             imagen: "https://images.unsplash.com/photo-1544040161-079743c3d527?q=80&w=400",
-            label1: "Elemento:", val1: "Fijo de Tierra",
-            label2: "Símbolo:", val2: "El Toro",
-            label3: "Proceso:", val3: "Coagulatio",
-            label4: "Regente:", val4: "Venus ♀"
+            val1: "Fijo de Tierra",
+            val2: "El Toro",
+            val3: "Coagulatio",
+            val4: "Venus ♀"
         },
         introduccion: "<strong>Tauro</strong> representa la manifestación física y la consolidación de la energía. Es el jardín donde la semilla de Aries echa raíces.",
         cuerpo: `
             <h2>La Densidad y el Valor</h2>
             <hr>
-            <p>Esotéricamente, Tauro rige la garganta y la palabra creadora. En la alquimia, se asocia con la <em>Coagulatio</em>, el proceso de dar cuerpo y forma al espíritu.</p>
+            <p>Esotéricamente, Tauro rige la garganta y la palabra creadora. En la alquimia, se asocia con la Coagulatio, el proceso de dar cuerpo y forma al espíritu.</p>
         `,
         quote: "En la quietud de la tierra reside la fuerza del diamante.",
         autor_quote: "— Sabiduría Elemental"
