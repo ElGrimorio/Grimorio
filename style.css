@@ -1,0 +1,152 @@
+:root {
+    --gold: #d4af37;
+    --gold-dim: rgba(212, 175, 55, 0.2);
+    --dark-void: #050508;
+    --sidebar-bg: #0c0c12;
+    --content-bg: rgba(15, 15, 22, 0.98);
+    --border: 1px solid #2d2d3a;
+    --text-main: #e0e0e0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--dark-void);
+    color: var(--text-main);
+    font-family: 'Quicksand', sans-serif;
+}
+
+#canvas-stars { position: fixed; top: 0; left: 0; z-index: -1; }
+
+/* --- NAVBAR --- */
+.wiki-navbar {
+    position: fixed;
+    top: 0; width: 100%; height: 60px;
+    background: var(--sidebar-bg);
+    border-bottom: 2px solid var(--gold);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1600px; margin: 0 auto; height: 100%;
+    display: flex; align-items: center; justify-content: space-between; padding: 0 20px;
+}
+
+.nav-logo { font-family: 'Cinzel'; font-weight: bold; color: var(--gold); display: flex; align-items: center; gap: 8px; }
+.btn-gold { background: var(--gold); color: black; padding: 6px 15px; text-decoration: none; font-weight: bold; font-size: 0.8rem; border-radius: 2px; }
+
+/* --- LAYOUT --- */
+.wiki-wrapper { display: flex; max-width: 1600px; margin: 60px auto 0; min-height: calc(100vh - 60px); }
+
+.wiki-sidebar {
+    width: 260px; background: var(--sidebar-bg); border-right: 1px solid var(--border);
+    padding: 30px 20px; position: sticky; top: 60px; height: calc(100vh - 60px);
+}
+
+.sidebar-section h3 { font-family: 'Cinzel'; color: var(--gold); font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 15px; border-bottom: 1px solid var(--gold-dim); padding-bottom: 5px; }
+.sidebar-section a { display: flex; align-items: center; gap: 10px; color: #999; text-decoration: none; font-size: 0.9rem; margin-bottom: 12px; transition: 0.3s; }
+.sidebar-section a:hover, .sidebar-section a.active { color: var(--gold); padding-left: 5px; }
+
+.wiki-main { flex: 1; background: var(--content-bg); padding: 40px; border-right: 1px solid var(--border); }
+
+/* --- PORTADA Y BUSCADOR DINÁMICO --- */
+.main-page-welcome {
+    text-align: center; padding: 60px 20px; border: 1px solid var(--gold-dim);
+    background: linear-gradient(to bottom, rgba(212,175,55,0.05), transparent);
+    border-radius: 8px; margin-bottom: 40px;
+}
+
+.welcome-content h1 { font-family: 'Cinzel'; font-size: 2.5rem; color: var(--gold); margin-bottom: 10px; }
+
+/* Contenedor relativo para el buscador */
+.search-wrapper { position: relative; max-width: 600px; margin: 25px auto; }
+
+.main-search-box {
+    background: rgba(0,0,0,0.5);
+    border: 1px solid var(--gold); border-radius: 30px; display: flex; align-items: center; padding: 10px 20px;
+}
+.main-search-box input { background: none; border: none; color: white; margin-left: 15px; width: 100%; outline: none; font-size: 1rem; }
+
+/* Estilos de la lista de resultados */
+#resultados-busqueda {
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--sidebar-bg); border: 1px solid var(--gold);
+    border-top: none; border-radius: 0 0 15px 15px; z-index: 5000;
+    max-height: 300px; overflow-y: auto; display: none;
+}
+
+.resultado-item {
+    display: block; padding: 12px 20px; color: white; text-decoration: none;
+    border-bottom: 1px solid var(--gold-dim); text-align: left; transition: 0.3s;
+}
+.resultado-item:hover { background: var(--gold-dim); color: var(--gold); }
+.resultado-item strong { display: block; font-family: 'Cinzel'; font-size: 0.9rem; color: var(--gold); }
+.resultado-item small { color: #888; font-size: 0.75rem; }
+
+.welcome-stats { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Grid de Categorías y Contenido */
+.main-page-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+.block-title { font-family: 'Cinzel'; color: var(--gold); margin-bottom: 20px; border-bottom: 2px solid var(--gold-dim); padding-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+
+.category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; margin-bottom: 40px; }
+.cat-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 25px 10px; text-align: center; text-decoration: none; color: white; transition: 0.3s; }
+.cat-card i { display: block; margin: 0 auto 10px; color: var(--gold); }
+.cat-card:hover { border-color: var(--gold); background: var(--gold-dim); transform: translateY(-3px); }
+
+/* Artículo Destacado */
+.featured-block { display: flex; gap: 20px; background: rgba(0,0,0,0.2); border: 1px solid var(--border); padding: 20px; border-radius: 4px; }
+.featured-block img { width: 180px; height: 180px; object-fit: cover; border: 1px solid var(--gold); }
+.featured-text h3 { font-family: 'Cinzel'; color: var(--gold); margin-bottom: 10px; }
+.featured-text p { font-family: 'Lora'; font-size: 1rem; margin-bottom: 15px; color: #aaa; }
+.wiki-link { color: var(--gold); text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+
+/* Sidebar Derecha */
+.wiki-block { background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 20px; margin-bottom: 20px; }
+.gold-border { border-left: 4px solid var(--gold); }
+.wiki-block h3 { font-family: 'Cinzel'; font-size: 0.9rem; color: var(--gold); margin-bottom: 15px; }
+.wiki-list { list-style: none; }
+.wiki-list li { font-size: 0.85rem; margin-bottom: 12px; border-bottom: 1px solid #1a1a1a; padding-bottom: 8px; }
+.wiki-list .date { color: var(--gold); font-weight: bold; margin-right: 10px; font-family: monospace; }
+.wiki-list a { color: #ccc; text-decoration: none; }
+.wiki-list a:hover { color: white; }
+.did-you-know { font-style: italic; font-size: 0.9rem; color: #999; }
+.wiki-btn-outline { display: block; text-align: center; border: 1px solid var(--gold); color: var(--gold); padding: 8px; text-decoration: none; font-size: 0.8rem; font-weight: bold; margin-top: 15px; transition: 0.3s; }
+.wiki-btn-outline:hover { background: var(--gold); color: black; }
+
+/* --- ESTILOS DE ARTÍCULO --- */
+.article-max-width { max-width: 1000px; margin: 0 auto; }
+.article-header h1 { font-family: 'Cinzel'; font-size: clamp(1.8rem, 5vw, 2.8rem); color: var(--gold); margin-bottom: 5px; }
+.breadcrumb { font-size: 0.75rem; color: var(--gold); opacity: 0.6; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+.article-content { font-family: 'Lora', serif; font-size: 1.1rem; line-height: 1.8; color: #ccc; }
+.article-content h2 { font-family: 'Cinzel'; color: var(--gold); margin: 40px 0 10px; font-size: 1.5rem; }
+hr { border: 0; border-top: 1px solid var(--gold-dim); margin-bottom: 25px; }
+
+/* INFOBOX */
+.wiki-infobox { float: right; width: 300px; background: #0a0a0f; border: 2px solid var(--gold); margin: 0 0 20px 25px; padding: 10px; box-shadow: 8px 8px 0px rgba(0,0,0,0.5); }
+.infobox-header { background: var(--gold); color: black; text-align: center; font-family: 'Cinzel'; font-weight: bold; padding: 8px; margin-bottom: 10px; }
+.infobox-image img { width: 100%; border: 1px solid #222; display: block; }
+.info-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #1a1a1a; font-size: 0.85rem; }
+.info-row .label { color: var(--gold); font-weight: bold; }
+
+/* CITAS Y LISTAS */
+.wiki-quote { background: rgba(212, 175, 55, 0.05); border-left: 4px solid var(--gold); padding: 25px; margin: 35px 0; font-style: italic; color: #eee; }
+.wiki-quote span { display: block; text-align: right; margin-top: 15px; color: var(--gold); font-family: 'Cinzel'; font-size: 0.8rem; }
+.article-list { margin: 20px 0 20px 25px; }
+.article-list li { margin-bottom: 10px; }
+
+/* --- RESPONSIVE --- */
+.mobile-menu-btn { display: none; background: none; border: none; color: var(--gold); cursor: pointer; }
+
+@media (max-width: 900px) {
+    .main-page-grid { grid-template-columns: 1fr; }
+    .wiki-sidebar { position: fixed; left: -100%; top: 60px; z-index: 2000; transition: 0.4s; width: 260px; height: calc(100vh - 60px); background: var(--sidebar-bg); }
+    .wiki-sidebar.active { left: 0; }
+    .mobile-menu-btn { display: block; }
+    .featured-block { flex-direction: column; }
+    .featured-block img { width: 100%; height: 200px; }
+    .welcome-content h1 { font-size: 1.8rem; }
+    .wiki-main { padding: 20px; }
+    .wiki-infobox { float: none; width: 100%; margin: 0 0 30px 0; box-shadow: none; }
+    .article-header h1 { font-size: 2rem; }
+}
