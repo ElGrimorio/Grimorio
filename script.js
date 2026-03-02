@@ -67,3 +67,39 @@ document.addEventListener('click', (e) => {
         lucide.createIcons();
     }
 });
+
+
+
+
+// --- CONEXIÓN CON GOOGLE SHEETS ---
+const form = document.getElementById('registroForm');
+const btnEnviar = document.getElementById('btnEnviar');
+const mensajeExito = document.getElementById('mensajeExito');
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx1fTP_cGUDq9kj4kp0_9ChMfjQV0c4oeRg4rdK21-7cuLPY1D21mkEa4LVtcYwzNvILA/exec';
+
+if (form) {
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        btnEnviar.innerText = 'Enviando...';
+        btnEnviar.disabled = true;
+
+        fetch(scriptURL, { 
+            method: 'POST', 
+            body: new FormData(form)
+        })
+        .then(response => {
+            console.log('Success!', response);
+            form.reset();
+            btnEnviar.innerText = 'Consagrar Registro';
+            btnEnviar.disabled = false;
+            mensajeExito.style.display = 'block';
+            setTimeout(() => { mensajeExito.style.display = 'none'; }, 5000);
+        })
+        .catch(error => {
+            console.error('Error!', error.message);
+            alert('Hubo un error en el ritual de registro. Inténtalo de nuevo.');
+            btnEnviar.disabled = false;
+            btnEnviar.innerText = 'Consagrar Registro';
+        });
+    });
+}
