@@ -78,3 +78,59 @@ const biblioteca = {
         autor_quote: "— Tabla de Esmeralda"
     }
 };
+
+
+const biblioteca = {
+    "aries": {
+        titulo: "Aries: El Fuego Primordial",
+        breadcrumb: "Archivo / Astrología / Signos de Fuego",
+        fecha: "2 de marzo, 2026",
+        infobox: {
+            header: "Signo de Aries",
+            imagen: "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=400",
+            val1: "Cardinal de Fuego",
+            val2: "El Carnero",
+            val3: "Calcina-tio",
+            val4: "Marte ♂"
+        },
+        introduccion: "<strong>Aries</strong> es el primer signo del zodíaco, representando el estallido inicial de la conciencia y la fuerza vital que rompe el invierno.",
+        cuerpo: `
+            <h2>Naturaleza Esotérica</h2>
+            <hr>
+            <p>En el sendero del iniciado, Aries representa la voluntad pura. Es el impulso que nos lleva a la existencia. Su regente, Marte, le otorga la armadura necesaria para enfrentar las pruebas del espíritu.</p>
+            <ul class="article-list">
+                <li><strong>Correspondencia Alquímica:</strong> Calcinatio (Purificación por fuego).</li>
+                <li><strong>Metal:</strong> Hierro.</li>
+                <li><strong>Día:</strong> Martes.</li>
+            </ul>
+        `,
+        quote: "Yo soy el guerrero que surge del tiempo.",
+        autor_quote: "— Tradición Esotérica"
+    },
+    "escorpio": {
+        titulo: "Escorpio: La Alquimia del Deseo",
+        breadcrumb: "Archivo / Astrología / Signos de Agua",
+        fecha: "2 de marzo, 2026",
+        infobox: {
+            header: "Signo de Escorpio",
+            imagen: "https://images.unsplash.com/photo-1502484732135-246e660507a7?q=80&w=400",
+            val1: "Fijo de Agua",
+            val2: "El Escorpión / Águila",
+            val3: "Separatio",
+            val4: "Plutón ♇ / Marte ♂"
+        },
+        introduccion: "<strong>Escorpio</strong> es el signo de la muerte y el renacimiento, el punto donde el alma debe descender a sus propias profundidades para transmutarse.",
+        cuerpo: `
+            <h2>El Misterio de la Transmutación</h2>
+            <hr>
+            <p>Escorpio rige los procesos de crisis y regeneración. Es el alquimista del zodíaco, transformando el plomo de los deseos básicos en el oro de la sabiduría espiritual.</p>
+            <ul class="article-list">
+                <li><strong>Las Tres Etapas:</strong> El Escorpión (instinto), el Águila (intelecto) y el Fénix (espíritu).</li>
+                <li><strong>Metal:</strong> Plutonio / Hierro magnético.</li>
+                <li><strong>Proceso:</strong> Putrefactio.</li>
+            </ul>
+        `,
+        quote: "No hay luz sin oscuridad, ni vida sin muerte.",
+        autor_quote: "— Misterios Mayores"
+    }
+};
