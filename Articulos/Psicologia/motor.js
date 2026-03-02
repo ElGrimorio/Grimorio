@@ -8,6 +8,13 @@ const datos = biblioteca[artId];
 if (datos) {
     // Rellenar la página con la información básica
     document.title = `${datos.titulo} | El Grimorio`;
+
+        // Rellenar datos extras
+    if(document.getElementById('art-casa')) document.getElementById('art-casa').innerText = datos.casa || "No definida";
+    if(document.getElementById('art-numero')) document.getElementById('art-numero').innerText = datos.numerologia || "N/A";
+    if(document.getElementById('art-rango')) document.getElementById('art-rango').innerText = datos.rango || "Consultar efemérides";
+    if(document.getElementById('art-rasgos')) document.getElementById('art-rasgos').innerText = datos.personalidad || "Varios";
+    
     
     // Usamos comprobación de existencia (el operador ?) para evitar errores si falta un ID en el HTML
     if(document.getElementById('art-titulo')) document.getElementById('art-titulo').innerText = datos.titulo;
