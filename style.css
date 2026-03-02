@@ -241,3 +241,30 @@ hr {
         font-size: 2rem;
     }
 }
+
+
+
+.resultados-flotantes {
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    background: var(--sidebar-bg);
+    border: 1px solid var(--gold);
+    border-radius: 0 0 10px 10px;
+    z-index: 5000;
+    margin-top: -20px; /* Ajustar según tu diseño */
+}
+
+.resultado-sugerencia {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-dim);
+}
+
+.resultado-sugerencia:hover {
+    background: var(--gold-dim);
+    color: var(--gold);
+}
+
