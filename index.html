@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada | El Grimorio Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="wiki-theme">
+
+    <canvas id="canvas-stars"></canvas>
+
+    <nav class="wiki-navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="mobile-menu-btn" id="menuBtn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="nav-logo">
+                    <i data-lucide="library" class="gold-icon"></i>
+                    <span>EL GRIMORIO</span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="registro.html" class="btn-gold">Registrar Iniciado</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wiki-wrapper">
+        <aside class="wiki-sidebar" id="sidebar">
+            <div class="sidebar-section">
+                <h3>Navegación</h3>
+                <a href="index.html" class="active"><i data-lucide="home"></i> Portada</a>
+                <a href="#"><i data-lucide="book-marked"></i> Glosario Arcano</a>
+                <a href="#"><i data-lucide="history"></i> Cambios Recientes</a>
+            </div>
+            <div class="sidebar-section">
+                <h3>El Archivo</h3>
+                <a href="#"><i data-lucide="moon"></i> Astrología</a>
+                <a href="#"><i data-lucide="flask-conical"></i> Alquimia</a>
+                <a href="#"><i data-lucide="sparkles"></i> Rituales</a>
+                <a href="#"><i data-lucide="layers"></i> Planos</a>
+            </div>
+        </aside>
+
+        <main class="wiki-main">
+            <header class="main-page-welcome">
+                <div class="welcome-content">
+                    <h1>Archivo del Grimorio Digital</h1>
+                    <p>Preservando el conocimiento silenciado a través de los siglos.</p>
+                    <div class="main-search-box">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="¿Qué secreto buscas hoy? (Ej: Piedra Filosofal, Aries...)">
+                    </div>
+                    <div class="welcome-stats">
+                        <span><strong>1,204</strong> Páginas</span> • <span><strong>15</strong> Investigadores</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="main-page-grid">
+                <section class="main-column-left">
+                    <h2 class="block-title"><i data-lucide="layout-grid"></i> Categorías del Saber</h2>
+                    <div class="category-grid">
+                        <a href="#" class="cat-card">
+                            <i data-lucide="moon"></i>
+                            <h4>Astrología</h4>
+                        </a>
+                        <a href="#" class="cat-card">
+                            <i data-lucide="flask-conical"></i>
+                            <h4>Alquimia</h4>
+                        </a>
+                        <a href="#" class="cat-card">
+                            <i data-lucide="gem"></i>
+                            <h4>Cristales</h4>
+                        </a>
+                        <a href="#" class="cat-card">
+                            <i data-lucide="scroll"></i>
+                            <h4>Historia</h4>
+                        </a>
+                    </div>
+
+                    <h2 class="block-title"><i data-lucide="award"></i> Artículo Destacado</h2>
+                    <div class="featured-block">
+                        <img src="https://images.unsplash.com/photo-1515544454840-7561f952f146?q=80&w=400" alt="Alquimia">
+                        <div class="featured-text">
+                            <h3>El Kybalion: Las 7 Leyes Herméticas</h3>
+                            <p>Un análisis técnico sobre el mentalismo, la correspondencia y la vibración. Descubre cómo los principios de Hermes Trismegisto rigen la realidad moderna...</p>
+                            <a href="#" class="wiki-link">Leer más del archivo →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="main-column-right">
+                    <div class="wiki-block gold-border">
+                        <h3>Novedades</h3>
+                        <ul class="wiki-list">
+                            <li><span class="date">02/03</span> <a href="#">Nuevas Runas Nórdicas</a></li>
+                            <li><span class="date">28/02</span> <a href="#">Tabla de Metales Alquímicos</a></li>
+                            <li><span class="date">25/02</span> <a href="#">Actualización: Horóscopo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="wiki-block">
+                        <h3>¿Sabías que...?</h3>
+                        <p class="did-you-know">El término "Grimorio" proviene del francés antiguo 'grammaire', refiriéndose a un libro de reglas gramaticales para la magia.</p>
+                    </div>
+
+                    <div class="wiki-block help-block">
+                        <h3>Contribuir</h3>
+                        <p>¿Has descubierto un nuevo manuscrito? Ayúdanos a completar el archivo.</p>
+                        <a href="registro.html" class="wiki-btn-outline">Unirse al Círculo</a>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
