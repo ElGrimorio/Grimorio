@@ -122,6 +122,29 @@
                     </div>
                 </aside>
             </div>
+
+<section id="seccion-registro" class="wiki-block gold-border" style="margin-top: 50px; background: rgba(10, 10, 15, 0.9);">
+    <h3><i data-lucide="scroll"></i> El Círculo de Iniciados</h3>
+    <p class="did-you-know">Registra tu identidad para recibir las crónicas y hallazgos del archivo.</p>
+    
+    <form id="registroForm" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <input type="text" name="nombre" placeholder="Nombre Arcano" required 
+                style="padding: 12px; background: #050508; border: 1px solid var(--gold-dim); color: white; font-family: 'Quicksand';">
+            <input type="email" name="email" placeholder="Correo Electrónico" required 
+                style="padding: 12px; background: #050508; border: 1px solid var(--gold-dim); color: white; font-family: 'Quicksand';">
+        </div>
+        <button type="submit" id="btnEnviar" class="wiki-btn-outline" style="cursor: pointer;">
+            Consagrar Registro
+        </button>
+    </form>
+    
+    <div id="mensajeExito" style="display:none; color: var(--gold); margin-top: 15px; text-align: center; font-family: 'Cinzel';">
+        <i data-lucide="check-circle"></i> ¡Identidad registrada en los archivos!
+    </div>
+</section>
+            
+            
         </main>
     </div>
 
