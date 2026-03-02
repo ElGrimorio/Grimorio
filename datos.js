@@ -36,6 +36,40 @@ const biblioteca = {
             val3: "Calcina-tio",
             val4: "Marte ♂"
         },
+        // DATOS BUSCADOS POR LOS USUARIOS
+        casa: "Casa I (La Identidad y el Yo)",
+        numerologia: "Número 9 (Energía y Acción)",
+        rango: "21 de Marzo - 19 de Abril",
+        personalidad: "Líder, valiente, entusiasta e independiente.",
+        
+        introduccion: "Aries es el primer signo del zodíaco, representando el estallido inicial de la conciencia y la fuerza vital que rompe el invierno para dar vida a la primavera.",
+        cuerpo: `
+            <h2>Personalidad y Rasgos Arcanos</h2>
+            <hr>
+            <p>Aries es la energía pura de la creación. Como primer signo, su psicología está marcada por el <strong>"Yo Soy"</strong>. No pide permiso para existir; simplemente avanza.</p>
+            
+            <div class="wiki-block gold-border" style="margin: 20px 0; padding: 15px; background: rgba(212, 175, 55, 0.05);">
+                <h4>Rango de Personalidad</h4>
+                <p><strong>Luz:</strong> Gran capacidad de liderazgo, coraje inquebrantable y honestidad brutal. Son los que inician los cambios que otros temen.</p>
+                <p><strong>Sombra:</strong> Puede caer en la impulsividad agresiva, la falta de paciencia y un egoísmo infantil cuando no consigue lo que desea al instante.</p>
+            </div>
+
+            <h3>La Casa I y la Numerología</h3>
+            <p>Al regir la <strong>Casa I</strong>, Aries define la máscara que usamos ante el mundo. Es el signo del Ascendente natural. En numerología, se asocia al <strong>9</strong> por su regente Marte, que le otorga una vibración de lucha, cierre de ciclos antiguos y conquista de nuevos horizontes.</p>
+
+            <ul class="article-list">
+                <li><strong>Compatibilidad:</strong> Se funde mejor con Leo y Sagitario (Fuego) y se equilibra con Libra (Aire).</li>
+                <li><strong>Misión de Vida:</strong> Aprender a dominar la voluntad sin destruir lo que le rodea.</li>
+                <li><strong>Día Sugerido:</strong> Martes (Día de Marte).</li>
+            </ul>
+
+            <h2>Correspondencias Místicas</h2>
+            <p>En el laboratorio alquímico, Aries representa la <em>Calcinatio</em>, el fuego que purifica la materia prima para extraer la esencia del alma.</p>
+        `,
+        quote: "El primer paso no te lleva a donde quieres, pero te saca de donde estás.",
+        autor_quote: "— Tradición del Guerrero"
+    },
+    
         introduccion: "<strong>Aries</strong> es el primer signo del zodíaco, representando el estallido inicial de la conciencia y la fuerza vital que rompe el invierno.",
         cuerpo: `
             <h2>Naturaleza Esotérica</h2>
